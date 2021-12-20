@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화관 보다</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style-1.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="js/slick.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.slide').bxSlider({
+                auto: true,
+                pause: 4000
+            })
+
+            $('.main-m').mouseenter(function () {
+                $('.sub-m').stop().slideDown();
+                $('.sub-bg').stop().slideDown();
+            })
+
+            $('.main-m').mouseleave(function () {
+                $('.sub-m').stop().slideUp();
+                $('.sub-bg').stop().slideUp();
+            })
+
+            $('.list01').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToScroll: 1,
+                slidesToShow: 4,
+            });
+
+            $('.list02').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToScroll: 1,
+                slidesToShow: 4,
+               
+            });
+
+
+            $('.next01').click(function () {
+                $('.list01').addClass("on")
+                $('.list01').siblings().removeClass("on")
+                $('.list01').slick('setPosition'); 
+
+            })
+            $('.next02').click(function () {
+                $('.list02').addClass("on")
+                $('.list02').siblings().removeClass("on")
+                $('.list02').slick('setPosition'); 
+
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner fix">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+                <nav>
+                    <ul class="main-m">
+                        <li><a href="#">영화</a>
+                            <ul class="sub-m">
+                                <li><a href="#">예매순위</a></li>
+                                <li><a href="#">현재상영작</a></li>
+                                <li><a href="#">개봉예정작</a></li>
+                            </ul>
+                        <li><a href="#">예매</a>
+                            <ul class="sub-m">
+                                <li><a href="#">빠른예매</a></li>
+                                <li><a href="#">예매안내</a></li>
+                                <li><a href="#">예매권등록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">극장</a>
+                            <ul class="sub-m">
+                                <li><a href="#">상영관안내</a></li>
+                                <li><a href="#">상영관위치</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이벤트</a>
+                            <ul class="sub-m">
+                                <li><a href="#">시사회</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">혜택</a>
+                            <ul class="sub-m">
+                                <li><a href="#">상영관혜택</a></li>
+                                <li><a href="#">회원혜택</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                    <div class="sub-bg"></div>
+                </nav>
+        </header>
+        <section class="section01">
+            <div class="slide">
+                <div><a href="#"><img src="images/1980-300.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/flytosky.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/1980-300.jpg" alt=""></a></div>
+            </div>
+        </section>
+        <section class="section02">
+            <div class="inner">
+                <h3 ><a class="next01" href="#none"> 현재상영작</a><a class="next02"href="#none">상영예정작</a></h3>
+
+                <div class="list01 on">
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/poster1.jpg" alt=""></a>
+                        </div>
+                        <p>듄 <span>평점4.5</span><em>2021.10.20</em></p>
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/poster02.jpg" alt=""></a>
+                        </div>
+                        <p>베놈2<span>평점4.3</span><em>2021.10.13</em></p></p>
+
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <div class="screen">
+                                <a href="#"><img src="images/poster05.jpg" alt=""></a>
+                            </div>
+                            <p>라스트듀얼<span>평점4.7</span><em>2021.10.20</em></p> </p>
+                        </div>
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/기적.jpg" alt=""></a>
+                        </div>
+                        <p>기적<span>평점4.4</span><em>2021.09.15</em></p>
+
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/샹치.jpg" alt=""></a>
+                        </div>
+                        <p> 샹치 <span>평점4.4</span><em>2021.09.01</em></p></p>
+                    </div>
+                </div>
+                <div class="list02">
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/poster1.jpg" alt=""></a>
+                        </div>
+                        <p>듄<span>평점4.5</span><em>2021.10.20</em></p></p>
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/poster02.jpg" alt=""></a>
+                        </div>
+                        <p>베놈2<span>평점4.3</span><em>2021.10.13</em></p></p>
+                    </div>
+                    <div class="poster ">
+                        <div class="screen">
+                            <a href="#"><img src="images/poster05.jpg" alt=""></a>
+                        </div>
+                        <p>라스트듀얼<span>평점4.7</span><em>2021.10.20</em></p> </p>
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/기적.jpg" alt=""></a>
+                        </div>
+                        <p>기적<span>평점4.4</span><em>2021.09.15</em></p>
+                        </p>
+                    </div>
+                    <div class="poster">
+                        <div class="screen">
+                            <a href="#"><img src="images/샹치.jpg" alt=""></a>
+                        </div>
+                        <p> 샹치 <span>평점4.4</span><em>2021.09.01</em></p></p>
+                    </div>
+                </div>
+        </section>
+        <article class="event">
+            <div class="inner fix">
+                <div class="left-cont">
+                    <div class="box01"><a href="#"><img src="images/box-1.jpg" alt=""></a></div>
+                    <div class="box02"><a href="#"><img src="images/coke.jpg" alt=""></a></div>
+                    <div class="box03"><a href="#"><img src="images/850-250.jpg" alt=""></a></div>
+                </div>
+                <div class="box04"><a href="#"><img src="images/300-470.jpg" alt=""></a></div>
+            </div>
+        </article>
+        <div class="icon inner">
+            <a href="#">고객센터 <span></span>
+                <img src="images/icon-headset.png" alt=""></a>
+            <a href="#">
+                요금안내<img src="images/coin.png" alt=""></a>
+            <a href="#">예매안내
+                <img src="images/clock.png" alt=""></a>
+            <a href="#">
+                대관문의<img src="images/calendar.png" alt=""></a>
+            <a href="#">FAQ
+                <img src="images/speech.png" alt=""></a>
+        </div>
+        <div class="banner">
+            <a href="#none"><img src="images/1920-200.jpg" alt=""></a>
+        </div>
+        <footer>
+            <div class="inner">
+                <h1 class="last-logo"><img src="images/logo.png" alt=""></h1>
+                <div class="text">
+                    <a href="#none">회사소개</a>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">청소년보호방침</a>
+                    <a href="#none">개인정보관련</a>
+                </div>
+            </div>
+            <div class="ha">
+                <p>
+                    박민하 제출
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
